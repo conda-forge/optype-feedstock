@@ -221,6 +221,3 @@ Feedstock Maintainers
 * [@jorenham](https://github.com/jorenham/)
 * [@lucascolley](https://github.com/lucascolley/)
 
-
-<!-- dummy commit to enable rerendering -->
-
