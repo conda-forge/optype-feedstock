@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -32,10 +32,17 @@ test:
     - pip
 
 about:
-  home: https://github.com/jorenham/optype
-  summary: Building blocks for precise & flexible type hints
+  home: https://github.com/jorenham/optype/
   license: BSD-3-Clause
   license_file: LICENSE
+  summary: Building blocks for precise & flexible type hints
+  description: 
+    Opinionated typing package for developing beautifully accurate typing annotations,
+    compatible with both static- and runtime type-checkers, and is battle-tested.
+    OpType has (optional) NumPy typing tools for annotating shape-typed array-likes of
+    with specific dtype, dtype-likes, and much more.
+  dev_url: https://github.com/jorenham/optype/
+  doc_url: https://github.com/jorenham/optype/blob/master/README.md
 
 extra:
   recipe-maintainers:
