@@ -3,11 +3,17 @@ About optype-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/optype-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jorenham/optype
+Home: https://github.com/jorenham/optype/
 
 Package license: BSD-3-Clause
 
 Summary: Building blocks for precise & flexible type hints
+
+Development: https://github.com/jorenham/optype/
+
+Documentation: https://github.com/jorenham/optype/blob/master/README.md
+
+Opinionated typing package for developing beautifully accurate typing annotations, compatible with both static- and runtime type-checkers, and is battle-tested. OpType has (optional) NumPy typing tools for annotating shape-typed array-likes of with specific dtype, dtype-likes, and much more.
 
 Current build status
 ====================
