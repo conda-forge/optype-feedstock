@@ -1,5 +1,5 @@
 {% set name = "optype" %}
-{% set version = "0.7.3" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/optype-{{ version }}.tar.gz
-  sha256: 51c8dd104ac197457059bcee5e256160a641ca72c6c852012d952790a5e0cac0
+  sha256: 8cbfd452d6f06c7c70502048f38a0d5451bc601054d3a577dd09c7d6363950e1
 
 build:
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
