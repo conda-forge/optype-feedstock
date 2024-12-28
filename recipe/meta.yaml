@@ -39,11 +39,7 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE
   summary: Building blocks for precise & flexible type hints
-  description: 
-    Opinionated typing package for developing beautifully accurate typing annotations,
-    compatible with both static- and runtime type-checkers, and is battle-tested.
-    OpType has (optional) NumPy typing tools for annotating shape-typed array-likes of
-    with specific dtype, dtype-likes, and much more.
+  description: Opinionated typing package for developing beautifully accurate typing annotations, compatible with both static- and runtime type-checkers, and is battle-tested. OpType has (optional) NumPy typing tools for annotating shape-typed array-likes of with specific dtype, dtype-likes, and much more.
   dev_url: https://github.com/jorenham/optype/
   doc_url: https://github.com/jorenham/optype/blob/master/README.md
 
