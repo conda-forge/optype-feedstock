@@ -1,5 +1,5 @@
 {% set name = "optype" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/optype-{{ version }}.tar.gz
-  sha256: 8cbfd452d6f06c7c70502048f38a0d5451bc601054d3a577dd09c7d6363950e1
+  sha256: 1c2f99b0708ab6e2625f52093a6e000f805a4346191f09bcce0459da84a265a9
 
 build:
   skip: true  # [py<310]
@@ -39,11 +39,7 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE
   summary: Building blocks for precise & flexible type hints
-  description: 
-    Opinionated typing package for developing beautifully accurate typing annotations,
-    compatible with both static- and runtime type-checkers, and is battle-tested.
-    OpType has (optional) NumPy typing tools for annotating shape-typed array-likes of
-    with specific dtype, dtype-likes, and much more.
+  description: Opinionated typing package for developing beautifully accurate typing annotations, compatible with both static- and runtime type-checkers, and is battle-tested. OpType has (optional) NumPy typing tools for annotating shape-typed array-likes of with specific dtype, dtype-likes, and much more.
   dev_url: https://github.com/jorenham/optype/
   doc_url: https://github.com/jorenham/optype/blob/master/README.md
 
