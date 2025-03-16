@@ -1,0 +1,57 @@
+schema_version: 1
+
+context:
+  name: optype
+  version: 0.9.2
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/optype-${{ version }}.tar.gz
+  sha256: d7487a5b7fe96bacfc5dc8fab6b90c14f1e65e7ba6e7b22a8bef48d29690edac
+
+build:
+  number: 1
+  skip: match(python, "<3.10")
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+  host:
+    - python
+    - hatchling
+    - pip
+  run:
+    - python
+    - if: match(python, "<3.13")
+      then: typing-extensions >=4.10
+
+tests:
+  - python:
+      imports:
+        - optype
+  - requirements:
+      run:
+        - pip
+    script:
+      - pip check
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Building blocks for precise & flexible type hints
+  description: Opinionated typing package for developing beautifully accurate typing annotations, compatible with both static- and runtime type-checkers, and is battle-tested. OpType has (optional) NumPy typing tools for annotating shape-typed array-likes of with specific dtype, dtype-likes, and much more.
+  homepage: https://github.com/jorenham/optype/
+  repository: https://github.com/jorenham/optype/
+  documentation: https://github.com/jorenham/optype/blob/master/README.md
+
+extra:
+  recipe-maintainers:
+    - lucascolley
+    - jorenham
