@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: optype
-  version: "0.9.3"
+  version: "0.10.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,11 +10,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/optype-${{ version }}.tar.gz
-  sha256: 5f09d74127d316053b26971ce441a4df01f3a01943601d3712dd6f34cdfbaf48
+  sha256: 2b89a1b8b48f9d6dd8c4dd4f59e22557185c81823c6e2bfc43c4819776d5a7ca
 
 build:
   number: 0
-  skip: match(python, "<3.10")
+  skip: match(python, "<3.11")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
