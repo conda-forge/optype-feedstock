@@ -3,6 +3,7 @@ schema_version: 1
 context:
   name: optype
   version: "0.12.0"
+  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -13,34 +14,26 @@ source:
   sha256: d1314f486028bc8d53b8c3e6b65f493d999d983df11978272ff67c1876f8ce53
 
 build:
-  number: 0
-  skip: match(python, "<3.11")
+  number: 1
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  noarch: python
 
 requirements:
-  build:
-    - if: build_platform != target_platform
-      then:
-        - python
-        - cross-python_${{ target_platform }}
   host:
-    - python
+    - python ${{ python_min }}.*
     - hatchling
     - pip
   run:
-    - python
-    - if: match(python, "<3.13")
-      then: typing-extensions >=4.10
+    - python >=${{ python_min }}
+    # needed for python <3.13, not using a selector to enable noarch
+    - typing-extensions >=4.10 
 
 tests:
   - python:
       imports:
         - optype
-  - requirements:
-      run:
-        - pip
-    script:
-      - pip check
+      pip_check: true
+      python_version: ${{ python_min }}.*
 
 about:
   license: BSD-3-Clause
