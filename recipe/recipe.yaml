@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: optype
-  version: "0.12.0"
+  version: "0.12.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/optype-${{ version }}.tar.gz
-  sha256: d1314f486028bc8d53b8c3e6b65f493d999d983df11978272ff67c1876f8ce53
+  sha256: 66000ece7afff94229a770bee194149d944429e4c5ccf85ef011a121dce08f36
 
 build:
   number: 0
