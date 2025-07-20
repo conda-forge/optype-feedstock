@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: optype
-  version: "0.12.0"
+  version: "0.12.2"
   python_min: "3.11"
 
 package:
@@ -11,17 +11,17 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/optype-${{ version }}.tar.gz
-  sha256: d1314f486028bc8d53b8c3e6b65f493d999d983df11978272ff67c1876f8ce53
+  sha256: 3f53a89f56f0ea23be4d212611dce0f3a2a8946543a9a72783e349c49b232934
 
 build:
-  number: 1
+  number: 0
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
 requirements:
   host:
     - python ${{ python_min }}.*
-    - hatchling
+    - uv-build
     - pip
   run:
     - python >=${{ python_min }}
