@@ -34,6 +34,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-optype-green.svg)](https://anaconda.org/conda-forge/optype) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/optype.svg)](https://anaconda.org/conda-forge/optype) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/optype.svg)](https://anaconda.org/conda-forge/optype) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/optype.svg)](https://anaconda.org/conda-forge/optype) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-optype--numpy-green.svg)](https://anaconda.org/conda-forge/optype-numpy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/optype-numpy.svg)](https://anaconda.org/conda-forge/optype-numpy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/optype-numpy.svg)](https://anaconda.org/conda-forge/optype-numpy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/optype-numpy.svg)](https://anaconda.org/conda-forge/optype-numpy) |
 
 Installing optype
 =================
@@ -45,16 +46,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `optype` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `optype, optype-numpy` can be installed with `conda`:
 
 ```
-conda install optype
+conda install optype optype-numpy
 ```
 
 or with `mamba`:
 
 ```
-mamba install optype
+mamba install optype optype-numpy
 ```
 
 It is possible to list all of the versions of `optype` available on your platform with `conda`:
