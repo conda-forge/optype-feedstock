@@ -51,7 +51,7 @@ outputs:
       run:
         - python >=${{ python_min }}
         - numpy >=${{ numpy_min }}
-        - numpy-typing-compat >=${{ numpy_min }}, <3
+        - numpy-typing-compat >=20250818.${{ numpy_min }}, <20250819
         - ${{ pin_subpackage('optype', exact=True) }}
     tests:
       - python:
