@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: optype
-  version: "0.13.4"
+  version: "0.14.0"
   python_min: "3.11"
   numpy_min: "1.25"
 
@@ -12,7 +12,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 131d8e0f1c12d8095d553e26b54598597133830983233a6a2208886e7a388432
+  sha256: 925cf060b7d1337647f880401f6094321e7d8e837533b8e159b9a92afa3157c6
 
 build:
   number: 0
