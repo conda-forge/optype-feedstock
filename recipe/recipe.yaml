@@ -2,9 +2,10 @@ schema_version: 1
 
 context:
   name: optype
-  version: "0.15.0"
+  version: "0.16.0"
   python_min: "3.11"
-  numpy_min: "1.25"
+  numpy_min: "1.26"
+  numpy_max: "2.7"
 
 recipe:
   name: ${{ name }}-split
@@ -12,7 +13,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 457d6ca9e7da19967ec16d42bdf94e240b33b5d70a56fbbf5b427e5ea39cf41e
+  sha256: fa682fd629ef6b70ba656ebc9fdd6614ba06ce13f52e0416dd8014c7e691a2d1
 
 build:
   number: 0
@@ -50,7 +51,7 @@ outputs:
         - python ${{ python_min }}.*
       run:
         - python >=${{ python_min }}
-        - numpy >=${{ numpy_min }}
+        - numpy >=${{ numpy_min }}, <${{ numpy_max }}
         - numpy-typing-compat >=20250818.${{ numpy_min }}, <20251207.1.0
         - ${{ pin_subpackage('optype', exact=True) }}
     tests:
@@ -74,7 +75,7 @@ about:
   description: Opinionated typing package for developing beautifully accurate typing annotations, compatible with both static- and runtime type-checkers, and is battle-tested. OpType has (optional) NumPy typing tools for annotating shape-typed array-likes of with specific dtype, dtype-likes, and much more.
   homepage: https://github.com/jorenham/optype/
   repository: https://github.com/jorenham/optype/
-  documentation: https://github.com/jorenham/optype/blob/master/README.md
+  documentation: https://jorenham.github.io/optype/
 
 extra:
   recipe-maintainers:

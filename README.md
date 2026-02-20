@@ -11,7 +11,7 @@ Summary: Building blocks for precise & flexible type hints
 
 Development: https://github.com/jorenham/optype/
 
-Documentation: https://github.com/jorenham/optype/blob/master/README.md
+Documentation: https://jorenham.github.io/optype/
 
 Opinionated typing package for developing beautifully accurate typing annotations, compatible with both static- and runtime type-checkers, and is battle-tested. OpType has (optional) NumPy typing tools for annotating shape-typed array-likes of with specific dtype, dtype-likes, and much more.
 
