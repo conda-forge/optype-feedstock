@@ -2,10 +2,10 @@ schema_version: 1
 
 context:
   name: optype
-  version: "0.17.1"
-  python_min: "3.11"
-  numpy_min: "1.26"
-  numpy_max: "2.7"
+  version: "0.18.0"
+  python_min: "3.12"
+  numpy_min: "2.0"
+  numpy_max: "2.8"
 
 recipe:
   name: ${{ name }}-split
@@ -13,7 +13,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 07bfa32b795dea28fba8605a6288d36370d072f25183fb9c29b5a90f4b6f5638
+  sha256: ea10dee61b15ca299ed0d97025d362585c4dfc5481159bb999a1d0d414bbcb04
 
 build:
   number: 0
@@ -52,7 +52,7 @@ outputs:
       run:
         - python >=${{ python_min }}
         - numpy >=${{ numpy_min }}, <${{ numpy_max }}
-        - numpy-typing-compat >=20250818.${{ numpy_min }}, <20251207.1.0
+        - numpy-typing-compat >=20260602.${{ numpy_min }}, <20260603.${{ numpy_min }}
         - ${{ pin_subpackage('optype', exact=True) }}
     tests:
       - python:
