@@ -36,6 +36,9 @@ outputs:
 
     tests:
       - python:
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - optype
           pip_check: true
@@ -56,6 +59,9 @@ outputs:
         - ${{ pin_subpackage('optype', exact=True) }}
     tests:
       - python:
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
           imports:
             - optype
       - files:
