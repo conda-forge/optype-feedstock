@@ -36,9 +36,6 @@ outputs:
 
     tests:
       - python:
-          python_version:
-            - ${{ python_min }}.*
-            - "*"
           imports:
             - optype
           pip_check: true
